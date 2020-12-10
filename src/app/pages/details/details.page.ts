@@ -36,4 +36,8 @@ export class DetailsPage implements OnInit {
     });
   }
 
+  openPageTwo() {
+    this.router.navigate(['inside/list/details-two']);
+  }
+
 }

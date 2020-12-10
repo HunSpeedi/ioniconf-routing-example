@@ -36,7 +36,7 @@ export class ListPage implements OnInit {
   openDetailsWithQueryParams() {
     let navigationExtras: NavigationExtras = {
       queryParams: {
-        pokemon: JSON.stringify(this.customPokemon)
+        id: this.myid
       },
       queryParamsHandling: 'merge'
     };
@@ -46,7 +46,7 @@ export class ListPage implements OnInit {
   openWithExtras() {
     let navigationExtras: NavigationExtras = {
       state: {
-        pokemon: this.customPokemon
+        id: this.myid
       }
     };
     this.router.navigateByUrl('inside/list/details', navigationExtras);

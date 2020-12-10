@@ -20,7 +20,12 @@ const routes: Routes = [
       },
       {
         path: 'list/details',
-        loadChildren: () => import('../details/details.module').then(m => m.DetailsPageModule)
+        loadChildren: () => import('../details/details.module').then(m => m.DetailsPageModule),
+        canActivate: [DummyGuardService]
+      },
+      {
+        path: 'list/details-two',
+        loadChildren: () => import('../details-two/details-two.module').then(m => m.DetailsTwoPageModule)
       },
       {
         path: 'list/details/:id',
